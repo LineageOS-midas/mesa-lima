@@ -29,6 +29,8 @@ endif
 
 intermediates := $(call local-generated-sources-dir)
 
+LOCAL_EXPORT_C_INCLUDE_DIRS += $(intermediates)/nir
+
 LOCAL_SRC_FILES := $(LOCAL_SRC_FILES)
 
 LOCAL_C_INCLUDES += \
