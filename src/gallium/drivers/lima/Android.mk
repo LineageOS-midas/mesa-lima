@@ -30,6 +30,8 @@ LOCAL_SRC_FILES := $(C_SOURCES)
 LOCAL_MODULE := libmesa_pipe_lima
 
 include $(GALLIUM_COMMON_MK)
+LOCAL_C_INCLUDES += external/mesa-lima/include/drm-uapi
+LOCAL_STATIC_LIBRARIES := libmesa_nir
 include $(BUILD_STATIC_LIBRARY)
 
 ifneq ($(HAVE_GALLIUM_LIMA),)
